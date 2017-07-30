@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView3;
     private TextView textView4;
     private RadioButton radioButton;
+    private TextView textView4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +37,6 @@ public class MainActivity extends AppCompatActivity {
         textView3 = (TextView) findViewById(R.id.textView3);
         textView4 = (TextView) findViewById(R.id.textView4);
         radioButton = (RadioButton) findViewById(R.id.radioButton);
+        textView4 = (TextView) findViewById(R.id.textView4);
     }
 }
