@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editText;
     private TextView textView2;
     private TextView textView3;
+    private TextView textView4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +32,6 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.editText);
         textView2 = (TextView) findViewById(R.id.textView2);
         textView3 = (TextView) findViewById(R.id.textView3);
+        textView4 = (TextView) findViewById(R.id.textView4);
     }
 }
