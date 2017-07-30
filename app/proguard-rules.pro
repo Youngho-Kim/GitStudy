@@ -1,25 +1,22 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in C:\Users\kwave\AppData\Local\Android\Sdk/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# The simpliest strategy is to not run proguard against your project's own code.
+# This doesn't provide the benefits of optimization & obfuscation against your
+# project, but will still strip the libraries. The advantage is that your app will
+# work without any subsequent effort. If you choose this strategy, the proguard
+# configuration for the project is simply the line below.
 
-# Add any project specific keep options here:
+-keep class com.android.kwave.fastcampus.gitstudy.app.** { *; }
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# The more involved strategy is to specifically provide rules to keep portions of your
+# app's codebase unmodified while allowing proguard to optimize the rest.
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# The first decision is whether or not you want to obfuscate your code. This provides no
+# performance benefit but makes it harder for other people to read your source code.
+# Unfortunately obfuscation can cause issues for code that uses reflection or a few other
+# techniques. The default is to obfuscate.
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+-dontobfuscate
+
+# Additionally you will need to keep specific classes. A common use case is keeping all
+# of the models that are JSON parsed using something like Jackson.
+
+-keep class com.android.kwave.fastcampus.gitstudy.app.model.User { *; }
