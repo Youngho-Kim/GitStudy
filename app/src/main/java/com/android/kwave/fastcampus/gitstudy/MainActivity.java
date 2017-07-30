@@ -3,23 +3,17 @@ package com.android.kwave.fastcampus.gitstudy;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
-<<<<<<< HEAD
 import android.widget.EditText;
-=======
 import android.widget.TextView;
->>>>>>> master
 
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
     private Button button2;
     private Button button3;
-<<<<<<< HEAD
     private Button button4;
     private EditText editText;
-=======
     private TextView textView2;
->>>>>>> master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +26,8 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
-<<<<<<< HEAD
         button4 = (Button) findViewById(R.id.button4);
         editText = (EditText) findViewById(R.id.editText);
-=======
         textView2 = (TextView) findViewById(R.id.textView2);
->>>>>>> master
     }
 }
